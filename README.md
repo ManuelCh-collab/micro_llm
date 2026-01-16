@@ -1,4 +1,4 @@
-# llm 
+# LLM
 
 En este script se tiene como objetivo entrenar un tokenizador personalizado utilizando lo que es el algoritmo BPE o Byte Pair Encoding, siendo este proceso fundamental para el proceso de lenguaje natural( NLP) para convertir lo que es texto en una sevuencia de numeros que un modelo de LLM pueda entender 
 
