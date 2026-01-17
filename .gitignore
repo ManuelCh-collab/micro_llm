@@ -1,0 +1,14 @@
+# Entornos virtuales (venv)
+venv/
+.venv/
+env/
+bin/
+include/
+lib/
+lib64/
+share/
+pyvenv.cfg
+__pycache__/
+*.pyc
+.gitignore/
+
