@@ -2,6 +2,7 @@ import torch
 from app.config import Config
 from app.tokenizer_logic import BPETokenizer
 from app.embedding_logic import TransformerEmbedding
+from app.attention import Multipleattention
 
 tokenizer = BPETokenizer(vocab_size=Config.VOCAB_SIZE)
 
@@ -19,10 +20,19 @@ embedder = TransformerEmbedding(
     max_seq_len=Config.MAX_SEQ_LEN
     )
 
+attention = Multipleattention(
+    d_model = Config.D_MODEL,
+    num_heads = 8 
+)
+
 input_tensor = torch.tensor(tokens_ids).unsqueeze(0)
 
 with torch.no_grad():
     vectors = embedder(input_tensor)
+    vecna = attention.forward(vectors)
 
 print(f"Forma del tensor resultante: {vectors.shape}")
 print(f"Valores del primer token (primeros 5 elementos): \n{vectors[0, 0, :100]}")
+print("===============================================\n")
+print(f"Forma del tensor vecna: {vecna.shape}")
+print(f"Valores del primer token de vecna (primeros 5 elementos): \n{vecna[0, 0, :100]}")
