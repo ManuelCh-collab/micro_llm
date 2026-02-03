@@ -10,7 +10,10 @@ class Config:
     # Tokenizacion
     VOCAB_SIZE: int = 5000
     D_MODEL: int = 256
-    MAX_SEQ_LEN: int = 512
+    N_LAYERS: int = 6
+    MAX_SEQ_LEN: int = 128
+    BATCH_SIZE: int = 32
+    EPOCHS: int = 20
 
     # Directorios
     BASE_DIR: Path = Path(__file__).resolve().parent.parent

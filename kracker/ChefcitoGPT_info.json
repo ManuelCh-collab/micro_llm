@@ -1,0 +1,18 @@
+{
+    "metadata": {
+        "model_name": "ChefcitoGPT",
+        "created_at": "2026-02-02 20:08:42",
+        "device": "cpu"
+    },
+    "architecture": {
+        "vocab_size": 50000,
+        "d_model": 256,
+        "max_seq_len": 128,
+        "n_layer": 6,
+        "total_params": 28842320
+    },
+    "training_results": {
+        "final_loss": 0.5545,
+        "dataset_size_chars": 75940
+    }
+}

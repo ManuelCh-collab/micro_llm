@@ -41,11 +41,7 @@ class Multipleattention(nn.Module):
         out = out.transpose(1, 2).contiguous().view(batch_size, seq_len, self.d_model)
 
         return self.w_o(out)
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import math
-from typing import Optional
+    
 
 class MultiHeadAttention(nn.Module):
     def __init__(self , d_model: int = 256, num_heads: int = 8) -> None:

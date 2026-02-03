@@ -10,5 +10,5 @@ share/
 pyvenv.cfg
 __pycache__/
 *.pyc
-.gitignore/
-
+checkpoints/
+ChefcitoGPT_final.pth
